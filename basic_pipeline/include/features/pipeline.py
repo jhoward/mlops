@@ -1,3 +1,4 @@
+from data.dataclasses import EmailDict
 from features.calculators import (
     num_recipients,
     body_embedding,
@@ -11,8 +12,7 @@ FEATURE_CALCULATOR_MAP = {
     "email_subject": subject_embedding,
     "is_spam": spam_classifier
 }
-
-def engine(email_dict):
+def engine(email_dict: EmailDict):
 
     # Add validation checks
 
